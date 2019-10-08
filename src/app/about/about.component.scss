@@ -1,0 +1,31 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/easy';
+
+#about {
+  .goals {
+    display: flex;
+    padding: 15px 0;
+    margin-bottom: 15px;
+    background-color: $accentone;
+    @extend .transparent;
+
+    .image {
+      min-width: 64px;
+      max-width: 64px;
+      padding: 0 8px 0 15px;
+
+      img {
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .content {
+      padding: 0 8px 0 8px;
+      p{
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

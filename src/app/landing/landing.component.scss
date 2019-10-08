@@ -1,0 +1,23 @@
+@import '../../assets/scss/variables';
+
+#landing{
+  background-image: linear-gradient(to right, $primary, $primarydark);
+
+  .banner{
+    h1{
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 5rem;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+
+    p{
+      margin: 36px 0 42px 0;
+    }
+
+    .learnbtn{
+      font-weight: 600;
+    }
+  }
+}
+

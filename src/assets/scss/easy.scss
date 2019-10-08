@@ -1,0 +1,499 @@
+@import 'variables';
+
+/* Typography */
+body {
+  color: #2a2a2a;
+  font-size: 16px;
+  line-height: 1.375em;
+}
+
+button {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+h1 {
+  margin: 0 0 0.3em 0;
+  font-size: 3em;
+  line-height: 1.05em;
+}
+
+h2 {
+  margin: 0 0 0.25em 0;
+  font-size: 2.25em;
+  line-height: 1.25em;
+}
+
+h3 {
+  margin: 0 0 0.2em 0;
+  font-size: 1.75em;
+  line-height: 1.25em;
+}
+
+h4 {
+  margin: 0 0 0.1em 0;
+  font-size: 1.125em;
+  line-height: 1.22222222em;
+}
+
+blockquote {
+  font-size: 1.5em;
+  line-height: 1.45833333em;
+}
+
+a {
+  color: #2a2a2a;
+
+  &:visited {
+    color: #2a2a2a;
+  }
+
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.textcenter {
+  text-align: center;
+}
+
+.textleft {
+  text-align: left;
+}
+
+.textright {
+  text-align: right;
+}
+
+.textjustify {
+  text-align: justify;
+  text-align-last: left;
+}
+
+.textlastright {
+  text-align-last: right;
+}
+
+.textsmall {
+  font-size: 0.9rem;
+}
+
+.texttiny {
+  font-size: 0.75rem;
+}
+
+.textbig {
+  font-size: 1.2rem;
+  font-size: 18px;
+}
+
+.textlarge {
+  font-size: 1.4rem;
+}
+
+.textbold {
+  font-weight: bold;
+}
+
+.textserif {
+  font-family: serif;
+}
+
+.texthover:hover {
+  color: $primary;
+}
+
+.textshadow {
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+}
+
+/* Colors */
+
+.textwhite {
+  color: $white;
+}
+
+.textblack {
+  color: $black;
+}
+
+/* Layout */
+
+body {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.limit {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ol {
+  transform-origin: left center;
+}
+
+.or {
+  transform-origin: right center;
+}
+
+.ot {
+  transform-origin: top center;
+}
+
+.ob {
+  transform-origin: bottom center;
+}
+
+.oc {
+  transform-origin: center center;
+}
+
+.olt {
+  transform-origin: left top;
+}
+
+.olb {
+  transform-origin: left bottom;
+}
+
+.ort {
+  transform-origin: right top;
+}
+
+.orb {
+  transform-origin: right bottom;
+}
+
+.posabs {
+  position: absolute;
+}
+
+.posrel {
+  position: relative;
+}
+
+.posfix {
+  position: fixed;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+.fullheight {
+  height: 100%;
+}
+
+@mixin flexcenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+.flexcenter {
+  @include flexcenter(row);
+}
+
+.flexcentercolumn {
+  @include flexcenter(column);
+}
+
+.flexcolumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.justifysb {
+  display: flex;
+  justify-content: space-between;
+}
+
+.justifysa {
+  display: flex;
+  justify-content: space-around;
+}
+
+.justifyfs {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.justifyfe {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.justifycenter {
+  display: flex;
+  justify-content: center;
+}
+
+.alignsb {
+  display: flex;
+  align-items: space-between;
+}
+
+.alignsa {
+  display: flex;
+  align-items: space-around;
+}
+
+.alignfs {
+  display: flex;
+  align-items: flex-start;
+}
+
+.alignfe {
+  display: flex;
+  align-items: flex-end;
+}
+
+.aligncenter {
+  display: flex;
+  align-items: center;
+}
+
+.flexwrap {
+  flex-wrap: wrap;
+}
+
+.flexnowrap {
+  flex-wrap: nowrap;
+}
+
+.flexwrapreverse {
+  flex-wrap: wrap-reverse;
+}
+
+.flexgrow {
+  display: flex;
+  flex-grow: 1;
+}
+
+.pad0 {
+  padding: 0;
+}
+
+.pad15 {
+  padding: 15px;
+}
+
+.padtb15 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.padlr15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.pad24 {
+  padding: 24px;
+}
+
+.padtb24 {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.padlr24 {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.sharp {
+  border-radius: 0 !important;
+}
+
+.curved {
+  border-radius: 5px !important;
+}
+
+.rounded {
+  border-radius: 8px !important;
+}
+
+.round {
+  border-radius: 2000px !important;
+}
+
+.cursorpointer {
+  cursor: pointer !important;
+}
+
+.cursordefault {
+  cursor: default !important;
+}
+
+.textunderline {
+  text-decoration: underline;
+}
+
+.textnounderline {
+  text-decoration: none;
+}
+
+.shadow1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.shadow2 {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.opaque {
+  opacity: 1;
+}
+
+.transparent {
+  opacity: 0;
+}
+
+/* Components */
+
+.easycard {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: box-shadow 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.easycard.hover:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.erroreffect {
+  box-shadow: 0 1px 3px rgba(255, 0, 0, 0.12), 0 1px 2px rgba(255, 0, 0, 0.24);
+}
+
+.easybutton {
+  margin: 0;
+  display: inline-table;
+  padding: 8px 32px 12px 32px;
+  border: 0;
+  outline: none;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.easybutton:focus {
+  outline: none;
+  border: 0;
+}
+
+.easybutton:hover {
+  opacity: 0.95;
+}
+
+.easybutton.colorprimary {
+  background-color: $primary;
+  color: $primary-content;
+}
+
+.easybutton.colorwhite {
+  background-color: $white;
+  color: $black;
+}
+
+.easyinputfield {
+  border: 2px solid rgba($primary, 0.4);
+  outline: none;
+  padding: 8px 12px;
+  background-color: transparent;
+  font-size: 16px;
+
+  &:focus {
+    border-color: #666;
+  }
+}
+
+.loadspinner {
+  display: inline-block;
+  animation: loading 0.7s infinite linear;
+}
+
+
+/* Forms */
+
+.easyform {
+  .formheading {
+    margin-bottom: 30px;
+  }
+
+  .formgroup {
+    margin-bottom: 15px;
+    position: relative;
+    @extend .flexcolumn;
+
+    label {
+      margin-bottom: 8px;
+      margin-left: 3px;
+      @extend .textsmall;
+    }
+
+    .passtoggle {
+      position: absolute;
+      top: 40px;
+      right: 15px;
+      cursor: pointer;
+    }
+
+    .note {
+      opacity: 0.9;
+      margin-left: 15px;
+      display: block;
+    }
+
+    .note.has-error {
+      color: red;
+    }
+  }
+
+  .formbuttonsgroup {
+    margin-top: 30px;
+    @extend .justifysb;
+  }
+
+  input[type="text"] {
+    @extend .easyinputfield;
+  }
+
+  input[type="email"] {
+    @extend .easyinputfield;
+  }
+
+  input[type="password"] {
+    @extend .easyinputfield;
+  }
+}
+
+
+/* Colors */
+
+.bgwhite {
+  background-color: $base;
+}
+
+.bgprimary {
+  background-color: $primary;
+  color: $primary-content;
+}
+
+.bgsecondary {
+  background-color: $secondary;
+  color: $secondary-content;
+}
+
+.bgtransparent {
+  background-color: transparent;
+}

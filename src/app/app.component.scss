@@ -1,0 +1,12 @@
+#fader {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: white;
+  opacity: 1;
+  display: block;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
